@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: n8n-service
+    runtime: docker
+    env: docker
+    plan: free
+    ports:
+      - port: 5678
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "wquijanoc"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "Helantra2009$"
+      - key: N8N_HOST
+        value: "${RENDER_SERVICE_NAME}.onrender.com"
+      - key: N8N_PROTOCOL
+        value: "https"
+      - key: WEBHOOK_URL
+        value: "https://${RENDER_SERVICE_NAME}.onrender.com/"
+    buildCommand: echo "No build needed for Docker"
+    startCommand: docker run -p 5678:5678 n8nio/n8n
