@@ -7,7 +7,7 @@ EXPOSE 5678
 # Variables de entorno para autenticación básica
 ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=admin
-ENV N8N_BASIC_AUTH_PASSWORD=TuContraseñaSegura123!
+ENV N8N_BASIC_AUTH_PASSWORD=Tucontrasena2025
 
 # Configuración para que funcione detrás del proxy de Render
 ENV N8N_HOST=${RENDER_SERVICE_NAME}.onrender.com
