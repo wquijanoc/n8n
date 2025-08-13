@@ -1,2 +1,1 @@
-# Este Dockerfile es solo para satisfacer a Render
-FROM scratch
+Remove Dockerfile as it's not needed for Render deployment
